@@ -35,12 +35,13 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 syntax enable
-set background=dark
 set showmatch
+set background=dark
 set mouse=a
 set autoindent
 set smartindent
-colorscheme solarized
+set number
+" colorscheme solarized
 
 " Ajustes para syntactic
 set statusline+=%#warningmsg#
