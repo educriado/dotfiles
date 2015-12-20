@@ -5,19 +5,24 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" NerdTree
-Plugin 'scrooloose/nerdtree.git'
-" Syntastic
-Plugin 'sclooloose/syntastic'
+" NERDTree
+Plugin 'scrooloose/nerdtree'
 " YouCompleteMe
 Plugin 'Valloric/YouCompleteMe'
-" delimitMate
+
+" delimitMate - Cierra parentesis y brackets automaticamente
 Plugin 'Raimondi/delimitMate'
+
+" Esquema de colores solarized
+Plugin 'altercation/vim-colors-solarized'
+
+" Vim-Airline - muestra el modo y codificacion de fichero, etc
+Plugin 'bling/vim-airline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -34,21 +39,23 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-syntax enable
-set showmatch
-set background=dark
-set mouse=a
+inoremap jk <ESC>
+let mapleader = ","
+
+filetype plugin indent on
+syntax on
 set autoindent
 set smartindent
+set encoding=utf-8
+set mouse=a
 set number
-" colorscheme solarized
+set t_Co=256
+set background=dark
+set hlsearch
+let g:solarized_termcolors=256
+colorscheme solarized
+" Ajustes para delimitMate
+let delimitMate_expand_cr = 1
 
-" Ajustes para syntactic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" Ajustes para airline
+set laststatus=2
