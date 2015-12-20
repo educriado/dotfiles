@@ -24,6 +24,9 @@ Plugin 'altercation/vim-colors-solarized'
 " Vim-Airline - muestra el modo y codificacion de fichero, etc
 Plugin 'bling/vim-airline'
 
+" Ctrl P - Para buscar ficheros en el sistema
+Plugin 'ctrlpvim/ctrlp.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -52,10 +55,11 @@ set number
 set t_Co=256
 set background=dark
 set hlsearch
-let g:solarized_termcolors=256
-colorscheme solarized
+" let g:solarized_termcolors=256
+" colorscheme solarized
 " Ajustes para delimitMate
 let delimitMate_expand_cr = 1
 
 " Ajustes para airline
 set laststatus=2
+let g:airline_powerline_fonts = 1 
