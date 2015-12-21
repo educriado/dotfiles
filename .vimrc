@@ -72,7 +72,7 @@ set t_Co=256
 set background=dark
 set hlsearch
 " let g:solarized_termcolors=256
-" colorscheme solarized
+colorscheme mirodark
 
 " Ajustes para delimitMate
 let delimitMate_expand_cr = 1
