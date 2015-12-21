@@ -50,7 +50,7 @@ filetype plugin indent on    " required
 
 inoremap jk <ESC>
 
-" Las teclas no funcionan 
+" Las teclas no funcionan
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
 inoremap  <Left>   <NOP>
@@ -73,9 +73,10 @@ set background=dark
 set hlsearch
 " let g:solarized_termcolors=256
 " colorscheme solarized
+
 " Ajustes para delimitMate
 let delimitMate_expand_cr = 1
 
 " Ajustes para airline
 set laststatus=2
-let g:airline_powerline_fonts = 1 
+let g:airline_powerline_fonts = 1
