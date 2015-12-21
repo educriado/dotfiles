@@ -27,6 +27,9 @@ Plugin 'bling/vim-airline'
 " Ctrl P - Para buscar ficheros en el sistema
 Plugin 'ctrlpvim/ctrlp.vim'
 
+" Syntastic - Corrector de sintaxis en distintos lenguajes de programacion
+Plugin 'scrooloose/syntastic'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -43,6 +46,16 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 inoremap jk <ESC>
+
+" Las teclas no funcionan 
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
 let mapleader = ","
 
 filetype plugin indent on
