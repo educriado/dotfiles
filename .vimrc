@@ -33,6 +33,12 @@ Plugin 'scrooloose/syntastic'
 " Fugitive - Integracion de vim con git
 Plugin 'tpope/vim-fugitive'
 
+" tmuxline.vim - statusline para tmux integrada con airline
+Plugin 'edkolev/tmuxline.vim'
+" vim-bufkill - cierra el buffer sin cerrar la ventana
+" se usa con el comando :BD
+Plugin 'qpkorr/vim-bufkill'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -66,11 +72,11 @@ syntax on
 set autoindent
 set smartindent
 set encoding=utf-8
-set mouse=a
 set number
 set t_Co=256
 set background=dark
 set hlsearch
+set colorcolumn=80
 " let g:solarized_termcolors=256
 colorscheme mirodark
 
@@ -80,3 +86,6 @@ let delimitMate_expand_cr = 1
 " Ajustes para airline
 set laststatus=2
 let g:airline_powerline_fonts = 1
+
+" Abre automaticamente NERDTree
+au VimEnter *  NERDTree
