@@ -34,9 +34,11 @@ Plugin 'scrooloose/syntastic'
 " Fugitive - Integracion de vim con git
 Plugin 'tpope/vim-fugitive'
 
-" Vim-indent-guides: marca con colores los distintos niveles de indentacion
-" No funciona muy bien. Se llama con <Leader>ig
-Plugin 'nathanaelkane/vim-indent-guides'
+" tmuxline.vim - statusline para tmux integrada con airline
+Plugin 'edkolev/tmuxline.vim'
+" vim-bufkill - cierra el buffer sin cerrar la ventana
+" se usa con el comando :BD
+Plugin 'qpkorr/vim-bufkill'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -78,7 +80,7 @@ set background=dark
 set hlsearch
 set colorcolumn=80
 " let g:solarized_termcolors=256
-" colorscheme solarized
+colorscheme mirodark
 
 " Ajustes para delimitMate
 let delimitMate_expand_cr = 1
