@@ -12,6 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " NERDTree
 Plugin 'scrooloose/nerdtree'
+
 " YouCompleteMe
 Plugin 'Valloric/YouCompleteMe'
 
@@ -33,11 +34,16 @@ Plugin 'scrooloose/syntastic'
 " Fugitive - Integracion de vim con git
 Plugin 'tpope/vim-fugitive'
 
+" Vim-indent-guides: marca con colores los distintos niveles de indentacion
+" No funciona muy bien. Se llama con <Leader>ig
+Plugin 'nathanaelkane/vim-indent-guides'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
+" filetype plugin on
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -66,11 +72,11 @@ syntax on
 set autoindent
 set smartindent
 set encoding=utf-8
-set mouse=a
 set number
 set t_Co=256
 set background=dark
 set hlsearch
+set colorcolumn=80
 " let g:solarized_termcolors=256
 " colorscheme solarized
 
@@ -80,3 +86,6 @@ let delimitMate_expand_cr = 1
 " Ajustes para airline
 set laststatus=2
 let g:airline_powerline_fonts = 1
+
+" Abrir NERDTree de forma automatica
+au VimEnter *  NERDTree
