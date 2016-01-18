@@ -34,9 +34,8 @@ Plugin 'scrooloose/syntastic'
 " Fugitive - Integracion de vim con git
 Plugin 'tpope/vim-fugitive'
 
-" Vim-indent-guides: marca con colores los distintos niveles de indentacion
-" No funciona muy bien. Se llama con <Leader>ig
-Plugin 'nathanaelkane/vim-indent-guides'
+" tmuxline.vim - statusline para tmux integrada con airline
+Plugin 'edkolev/tmuxline.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -65,6 +64,7 @@ noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
+
 " Tab navigation like Firefox.
 nnoremap <C-S-tab> :tabprevious<CR>
 nnoremap <C-tab>   :tabnext<CR>
@@ -86,6 +86,11 @@ set hlsearch
 set colorcolumn=80
 " let g:solarized_termcolors=256
 " colorscheme solarized
+
+" Ajustes para delimitMate
+let delimitMate_expand_cr = 1
+
+colorscheme mirodark
 
 " Ajustes para delimitMate
 let delimitMate_expand_cr = 1
